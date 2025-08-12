@@ -1,11 +1,10 @@
 const users=require('../models/users.model')
-
-exports.getUser=(req,res)=>{
-
-     res.send('user router is here');
+const path = require('path');
 
 
-}
+exports.getUser = (req, res) => {
+  res.sendFile(path.join(__dirname + '/../views/index.html'));
+};
 
 exports.saveUser=(req,res)=>{
 
